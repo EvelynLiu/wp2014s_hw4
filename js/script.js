@@ -97,8 +97,8 @@ FB.getLoginStatus(function (response) {
 			ctx.drawImage(img3,80,350); //劃入img3，並根據你的滑鼠游標移動，你可以自行更換想要移動的圖層，數值會因XY軸向有所不同
 			var inputedText = $('#inputed').val();//抓取頁面inputed ID的內容
 			ctx.fillStyle = "black"; //字體顏色
-			ctx.font='28px "微軟正黑體"'; //字體大小和字形
-			ctx.fillText(inputedText,120,400); //字體也可以依據滑鼠游標移動，所輸入的值可自行調整，若不想移動輸入的字體，可以把它改成（inputedText,0,0)X Y軸 0，0的位置
+			ctx.font='30px "微軟正黑體"'; //字體大小和字形
+			ctx.fillText(inputedText,180,450); //字體也可以依據滑鼠游標移動，所輸入的值可自行調整，若不想移動輸入的字體，可以把它改成（inputedText,0,0)X Y軸 0，0的位置
       }
     }
 
