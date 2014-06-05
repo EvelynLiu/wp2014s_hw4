@@ -26,10 +26,11 @@ FB.getLoginStatus(function (response) {
   else {
     //要求使用者登入，索取publish_actions權限
     FB.login(function (response) {
-      // handle the response
+      if (response.authResponse) {
+        window.location.reload();
+      } 
     }, {
         scope: 'publish_actions,user_photos', 
-        return_scopes: true
     });
   } 
 });
@@ -46,7 +47,7 @@ FB.getLoginStatus(function (response) {
 	var img2 = new Image(); //新增圖像2
 	img2.src = "img/wall_img.jpg" //圖像路徑
 	var img3 = new Image();//新增圖像3
-	img3.src = "img/text.jpg"//圖像路徑
+	img3.src = "img/text_box.jpg"//圖像路徑
 	
 	
 
