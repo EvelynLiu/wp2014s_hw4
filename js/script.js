@@ -47,7 +47,7 @@ FB.getLoginStatus(function (response) {
 	var img2 = new Image(); //新增圖像2
 	img2.src = "img/wall_img.jpg" //圖像路徑
 	var img3 = new Image();//新增圖像3
-	img3.src = "img/text_box.png"//圖像路徑
+	img3.src = "img/text.png"//圖像路徑
 	
 	
 
