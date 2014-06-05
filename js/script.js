@@ -43,13 +43,13 @@ FB.getLoginStatus(function (response) {
 	ctx.fillText("Click here to start fill with Facebook Profile Picture", 40, 270); //設定預設的開始畫面
     var img = new Image(); // 新增圖像1
     img.src = "img/PinkFrame.png"; //圖像路徑（路徑自己設，且自己加入想要的圖層）
-    img.width=546 px;
+    //img.width=546 px;
 	var img2 = new Image(); //新增圖像2
 	img2.src = "img/Red-rose.png" //圖像路徑
-	img2.width=546 px;
+	//img2.width=546 px;
 	var img3 = new Image();//新增圖像3
 	img3.src = "img/wallpaper.png"//圖像路徑
-	img3.width=546 px;
+	//img3.width=546 px;
 	
 	
 
