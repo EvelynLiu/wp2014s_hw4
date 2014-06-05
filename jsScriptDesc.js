@@ -7,18 +7,18 @@ window.fbAsyncInit = function () {//facebook init
 //輸入基本的Facebook init的狀態，與Facebook 連接，包括APP ID的設定
 
 
-
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     //呼叫api把圖片放到#preview IMG tag 內
     
-  } else if (response.status === 'not_authorized') {
+  } 
+  else (response.status === 'not_authorized') {
     //要求使用者登入，索取publish_actions權限
-	
-  } else {
+  } 
+  else {
     //同樣要求使用者登入
   }
- });
+});
 
 
 //以下為canvas的程式碼，基本上不需多動，依據comments修改即可
