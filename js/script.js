@@ -42,11 +42,11 @@ FB.getLoginStatus(function (response) {
 	ctx.font='20px "Arial"'; //設定字體與大小
 	ctx.fillText("Click here to start fill with Facebook Profile Picture", 40, 270); //設定預設的開始畫面
     var img = new Image(); // 新增圖像1
-    img.src = "img/overlay.png"; //圖像路徑（路徑自己設，且自己加入想要的圖層）
+    img.src = "img/PinkFrame.png"; //圖像路徑（路徑自己設，且自己加入想要的圖層）
 	var img2 = new Image(); //新增圖像2
-	img2.src = "img/overlayback.png" //圖像路徑
+	img2.src = "img/Red-rose.png" //圖像路徑
 	var img3 = new Image();//新增圖像3
-	img3.src = "img/typography.png"//圖像路徑
+	img3.src = "img/wallpaper.png"//圖像路徑
 	
 	
 
