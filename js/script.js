@@ -18,6 +18,8 @@ FB.init({
 
 FB.getLoginStatus(function (response) {
   if (response.status === 'connected') {
+  	//拿token
+  	window.authToken = response.authResponse.accessToken;
     //呼叫api把圖片放到#preview IMG tag 內
     FB.api("/me/picture?type=large",function (e){
     	$("#preview1").attr("src",e.data.url);
