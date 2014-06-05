@@ -20,7 +20,7 @@ FB.getLoginStatus(function (response) {
   if (response.status === 'connected') {
     //呼叫api把圖片放到#preview IMG tag 內
     FB.api("/me/picture",function (e){
-    	$("#preview1").attr("src",response.data.url);
+    	$("#preview1").attr("src",e.data.url);
     });
   } 
   else {
