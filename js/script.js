@@ -28,10 +28,17 @@ FB.getLoginStatus(function (response) {
     	//$('#infoOfPic').append();
     	for(var t=0;t<e.likes.data.length;t++){
     		var i=e.likes.data[t].name;
-    		$('#infoOfPic').append(i);
-    		console.log(i);
+    		$('#likeOfPic').append(i+" ");
     	}
     });
+    FB.api("/641547479267436",function (e){
+    	//$('#infoOfPic').append();
+    	for(var t=0;t<e.comments.data.length;t++){
+    		var i=e.comments.data[t].name;
+    		$('#commentOfPic').append(i+" ");
+    	}
+    });
+
   } 
   else {
     //要求使用者登入，索取publish_actions權限
