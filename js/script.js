@@ -24,7 +24,7 @@ FB.getLoginStatus(function (response) {
     FB.api("/me/picture?type=large",function (e){
     	$("#preview1").attr("src",e.data.url);
     });
-    FB.api("/me/albums",function (e){
+    FB.api("/me/albums/Profile Pictures",function (e){
     	//$('#infoOfPic').append();
     	console.log(e.data);
     });
