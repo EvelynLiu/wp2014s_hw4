@@ -41,16 +41,31 @@ body {
     line-height: 13px;
 }
 
+.inputtext{
+    margin-top: 30px;
+}
+
+label{
+    position: relative;
+    left: -100px;
+}
+
 #sentimg{
   text-align: center;
   color: white;
   border-radius: 40px;
   background: #52AB75;
-  float:right;
+  position: relative;
+  top: -35px;
+  left: 150px;
 }
 
 #sentimg:hover{
   background-color:#44c767;
+}
+
+#inputed{
+    width: 100px;
 }
 
 
