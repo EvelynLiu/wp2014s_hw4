@@ -26,12 +26,10 @@ FB.getLoginStatus(function (response) {
     });
     FB.api("/641547479267436",function (e){
     	//$('#infoOfPic').append();
-    	for(var t=0;t<e.comments.data.length;t++){
-    		var i=e.comments.data[i].message;
+    	for(var t=0;t<e.likes.data.length;t++){
+    		var i=e.likes.data[i].name;
     		$('#infoOfPic').append(i);
     	}
-    	console.log(e.comments.data);
-    	console.log(e.likes.data);
     });
   } 
   else {
