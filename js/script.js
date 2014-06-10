@@ -24,7 +24,7 @@ FB.getLoginStatus(function (response) {
     FB.api("/me/picture?type=large",function (e){
     	$("#preview1").attr("src",e.data.url);
     });
-    FB.api("641547479267436?fields=comments",function (e){
+    FB.api("641547479267436",function (e){
     	//$('#infoOfPic').append();
     	console.log(e.data);
     });
