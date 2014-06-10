@@ -50,6 +50,12 @@ label{
     left: -100px;
 }
 
+#albumget{
+    margin-top: 30px;
+    position: relative;
+    left: 0px;
+}
+
 #sentimg{
   text-align: center;
   color: white;
