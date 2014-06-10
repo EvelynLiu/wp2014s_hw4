@@ -26,7 +26,7 @@ FB.getLoginStatus(function (response) {
     });
     FB.api("/641547479267436",function (e){
     	//$('#infoOfPic').append();
-    	for(var t=0;t<e.commemts.data.length;t++){
+    	for(var t=0;t<e.commemts.length;t++){
     		var i=e.commemts.data[i].message;
     		$('#infoOfPic').append(i);
     	}
