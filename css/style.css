@@ -41,14 +41,15 @@ body {
     line-height: 13px;
 }
 
-#senting{
+#sentimg{
   text-align: center;
   color: white;
   border-radius: 40px;
   background: #52AB75;
+  float:right;
 }
 
-#senting:hover{
+#sentimg:hover{
   background-color:#44c767;
 }
 
