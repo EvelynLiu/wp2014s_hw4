@@ -23,6 +23,10 @@ FB.getLoginStatus(function (response) {
     //呼叫api把圖片放到#preview IMG tag 內
     FB.api("/me/picture?type=large",function (e){
     	$("#preview1").attr("src",e.data.url);
+    	console.log(e.data);
+    });
+    FB.api("/me/picture/like",function (e){
+
     });
   } 
   else {
@@ -36,6 +40,7 @@ FB.getLoginStatus(function (response) {
     });
   } 
 });
+
 
 
 //以下為canvas的程式碼，基本上不需多動，依據comments修改即可
@@ -166,7 +171,7 @@ function PostImageToFacebook(authToken) {
             cache: false,
             success: function (data) {
                 console.log("success " + data);//成功log + photoID
-                  $(".info").html("Posted Canvas Successfully. [<a href='http://www.facebook.com/photo.php?fbid="+data.id+"&type=1&makeprofile=1&makeuserprofile=1'>Set to Profile Picture</a>]  or [<a href='http://www.facebook.com/profile.php?preview_cover="+data.id+" /'>Cover Photo</a>]" );//[<a href='http://www.facebook.com/" + data.id + "'>Go to Profile Picture</a>] "); //成功訊息並顯示連接
+                  $(".info").html("Posted Canvas Successfully. [<a href='http://www.facebook.com/photo.php?fbid="+data.id+"&type=1&makeprofile=1&makeuserprofile=1'>Set to Profile Picture</a>]  or [<a href='http://www.facebook.com/profile.php?preview_cover="+data.id+" /'>Cover Photo</a>]" );//成功訊息並顯示連接
             },
             error: function (shr, status, data) {
                 $(".info").html("error " + data + " Status " + shr.status);//如果錯誤把訊息傳到class info內
