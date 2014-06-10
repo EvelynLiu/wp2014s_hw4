@@ -59,7 +59,6 @@ function getAlbum(){
 			var r=e.data[t].name;
 			var i='<option id="albumID" value='+n+">"+r+"</option>";
 			$("#album").append(i);
-			$("#album").prop("selectedIndex",-1)
 		}
 	});
 }
