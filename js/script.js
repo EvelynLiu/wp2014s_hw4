@@ -52,8 +52,8 @@ FB.getLoginStatus(function (response) {
 });
 
 function getAlbum(){
-	$("#getAlbum").remove();
-	FB.api("/me/albums",function(e){
+	$("#takeAlbum").remove();
+	FB.api("/me/albums",function (e){
 		for(var t=0;t<e.data.length;t++){
 			var n=e.data[t].id;
 			var r=e.data[t].name;
