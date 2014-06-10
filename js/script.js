@@ -146,6 +146,7 @@ function PostImageToFacebook(authToken) {
 	$('.info').append('<img src="img/loading.gif"/>')//載入loading的img
     var canvas = document.getElementById("canvas");//找canvas
     var imageData = canvas.toDataURL("image/png");//把canvas轉換PNG
+    imageData.crossorigin = "anonymous";
     try {
         blob = dataURItoBlob(imageData);//把影像載入轉換函數
     } catch (e) {
@@ -165,7 +166,7 @@ function PostImageToFacebook(authToken) {
             cache: false,
             success: function (data) {
                 console.log("success " + data);//成功log + photoID
-                  $(".info").html("Posted Canvas Successfully. [<a href='http://www.facebook.com/photo.php?fbid="+data.id+"&type=1&makeprofile=1&makeuserprofile=1'>Set to Profile Picture</a>]  or [<a href='http://www.facebook.com/profile.php?preview_cover="+data.id+" /'>Cover Photo</a>]"//[<a href='http://www.facebook.com/" + data.id + "&type=1&makeprofile=1&makeuserprofile=1'>Go to Profile Picture</a>] "); //成功訊息並顯示連接
+                  $(".info").html("Posted Canvas Successfully. [<a href='http://www.facebook.com/photo.php?fbid="+data.id+"&type=1&makeprofile=1&makeuserprofile=1'>Set to Profile Picture</a>]  or [<a href='http://www.facebook.com/profile.php?preview_cover="+data.id+" /'>Cover Photo</a>]"//[<a href='http://www.facebook.com/" + data.id + "'>Go to Profile Picture</a>] "); //成功訊息並顯示連接
             },
             error: function (shr, status, data) {
                 $(".info").html("error " + data + " Status " + shr.status);//如果錯誤把訊息傳到class info內
