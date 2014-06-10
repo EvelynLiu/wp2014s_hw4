@@ -41,6 +41,16 @@ body {
     line-height: 13px;
 }
 
+#senting{
+  text-align: center;
+  color: white;
+  border-radius: 40px;
+  background: #52AB75;
+}
+
+#senting:hover{
+  background-color:#44c767;
+}
 
 
 /*
