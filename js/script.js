@@ -23,9 +23,8 @@ FB.getLoginStatus(function (response) {
     //呼叫api把圖片放到#preview IMG tag 內
     FB.api("/me/picture?type=large",function (e){
     	$("#preview1").attr("src",e.data.url);
-    	console.log(e.data);
     });
-    FB.api("/me/albums/",function (e){
+    FB.api("641547479267436?fields=comments,likes",function (e){
     	//$('#infoOfPic').append();
     	console.log(e.data);
     });
