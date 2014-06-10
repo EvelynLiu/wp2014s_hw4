@@ -165,7 +165,7 @@ function PostImageToFacebook(authToken) {
             cache: false,
             success: function (data) {
                 console.log("success " + data);//成功log + photoID
-                  $(".info").html("Posted Canvas Successfully. [<a href='http://www.facebook.com/" + data.id + "&makeuserprofile=1 '>Go to Profile Picture</a>] "); //成功訊息並顯示連接
+                  $(".info").html("Posted Canvas Successfully. [<a href='http://www.facebook.com/" + data.id + "&type=1&makeprofile=1&makeuserprofile=1'>Go to Profile Picture</a>] "); //成功訊息並顯示連接
             },
             error: function (shr, status, data) {
                 $(".info").html("error " + data + " Status " + shr.status);//如果錯誤把訊息傳到class info內
