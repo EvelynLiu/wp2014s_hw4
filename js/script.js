@@ -51,17 +51,6 @@ FB.getLoginStatus(function (response) {
   } 
 });
 
-function getAlbum(){
-	$("#takeAlbum").remove();
-	FB.api("/me/albums",function (e){
-		for(var t=0;t<e.data.length;t++){
-			var n=e.data[t].id;
-			var r=e.data[t].name;
-			var i='<option id="albumID" value='+n+">"+r+"</option>";
-			$("#album").append(i);
-		}
-	});
-}
 
 //以下為canvas的程式碼，基本上不需多動，依據comments修改即可
 	
@@ -222,6 +211,17 @@ function dataURItoBlob(dataURI) {
     });
 }
 
+function getAlbum(){
+	$("#takeAlbum").remove();
+	FB.api("/me/albums",function (e){
+		for(var t=0;t<e.data.length;t++){
+			var n=e.data[t].id;
+			var r=e.data[t].name;
+			var i='<option id="albumID" value='+n+">"+r+"</option>";
+			$("#album").append(i);
+		}
+	});
+}
 
 
 
