@@ -29,6 +29,7 @@ FB.getLoginStatus(function (response) {
     	for(var t=0;t<e.likes.data.length;t++){
     		var i=e.likes.data[t].name;
     		$('#infoOfPic').append(i);
+    		console.log(i);
     	}
     });
   } 
