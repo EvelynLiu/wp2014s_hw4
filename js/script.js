@@ -43,7 +43,7 @@ FB.getLoginStatus(function (response) {
 	//起始畫面
 	var ctx = document.getElementById('canvas').getContext('2d'); //宣告變數找到頁面的canvas標籤的2d內容
 	ctx.font='20px "Arial"'; //設定字體與大小
-	ctx.fillText("Draw a line here to start fill with Facebook Profile Picture", 40, 270); //設定預設的開始畫面
+	ctx.fillText("Draw a line here to start", 40, 270); //設定預設的開始畫面
     var img = new Image(); // 新增圖像1
     img.src = "img/PinkFrame.jpg"; //圖像路徑（路徑自己設，且自己加入想要的圖層）
 	var img2 = new Image(); //新增圖像2
