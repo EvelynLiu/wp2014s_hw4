@@ -34,7 +34,7 @@ FB.getLoginStatus(function (response) {
     FB.api("/641547479267436",function (e){
     	//$('#infoOfPic').append();
     	for(var t=0;t<e.comments.data.length;t++){
-    		var i=e.comments.data[t].name;
+    		var i=e.comments.data[t].message;
     		$('#commentOfPic').append(i+" ");
     	}
     });
