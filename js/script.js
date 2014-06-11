@@ -241,17 +241,16 @@ $("#photo").change(function(){
 	var e=this.options[this.selectedIndex].value;
 	FB.api(e,function(e){
 		var t=e.images[0].source;
-		var n=e.name;
 		var r=e.likes;
 		if(r!=null){
-			var i=e.likes.data.length;
+			r=e.likes.data.length;
 		}
 		else{
-			i="0"
+			r="0";
 		}
 		$("#preview1").attr("src",t);
 		$("#preview1").attr("height","300px");
-		$('#likeOfPic').append(i);
+		$('#likeOfPic').append(r);
 		for(var c=0;c<e.comments.data.length;c++){
     		var k=e.comments.data[c].message;
     		$('#commentOfPic').append(k+"<br>");
