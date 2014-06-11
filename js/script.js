@@ -110,7 +110,7 @@ FB.getLoginStatus(function (response) {
 			profileIMG.height="300px";
 			//canvas.width = profileIMG.width;//設定canvas的大小需符合profileimg的大小
 			//canvas.height = profileIMG.height;
-			ctx.drawImage(img,0,0); //劃入img
+			ctx.drawImage(image,0,0); //劃入img
 			ctx.drawImage(profileIMG,canMouseX,canMouseY);//從XY軸0，0值開始畫如profileimg
 			ctx.drawImage(img3,70,350); //劃入img3，並根據你的滑鼠游標移動，你可以自行更換想要移動的圖層，數值會因XY軸向有所不同
 			var inputedText = $('#inputed').val();//抓取頁面inputed ID的內容
@@ -229,7 +229,6 @@ var image=new Image;
 $("#pattern").change(function(){
 	var e=this.options[this.selectedIndex].value;
 	image.src=e;
-	draw();
 });
 
 $("#album").change(function(){
