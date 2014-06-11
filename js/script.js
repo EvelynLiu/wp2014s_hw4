@@ -219,6 +219,18 @@ function getAlbum(){
 			var r=e.data[t].name;
 			var i='<option id="albumID" value='+n+">"+r+"</option>";
 			$("#album").append(i);
+			$("#album").prop("selectedIndex",-1)
+			var v=this.options[this.selectedIndex].value;
+			var s=v+"/photos";
+			FB.api(s,function (e){
+				for(var t=0;t<e.data.length;t++){
+					var n=e.data[t].id;
+					var r=e.data[t].name;
+					var i='<option id="photoID" value='+n+">"+r+"</option>";
+					$("#photo").append(i);
+					$("#photo").prop("selectedIndex",-1)
+				}
+			})
 		}
 	});
 }
