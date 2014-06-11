@@ -264,5 +264,19 @@ $("#photo").change(function(){
 	})
 });
 
+function handleFiles(e){
+	var t=document.getElementById("canvas").getContext("2d");
+	var n=URL.createObjectURL(e.target.files[0]);
+	var r=new Image;
+	r.onload=function(){
+		t.drawImage(r,270/2,270/2)
+	};
+	r.src=n;
+	$("#canvas").css("pointer-events","none");
+}
 
+window.onload=function(){
+	var e=document.getElementById("input");
+	e.addEventListener("change",handleFiles,false)
+}
 

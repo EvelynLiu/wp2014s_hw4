@@ -41,12 +41,16 @@
         <h5>Edit your Picture here:</h5>
         <canvas width="540" height="540" id="canvas"></canvas>
     </section>
-    <label for='pattern'>Select Pattern:
+    <label for='pattern'>選擇圖層:
             <select name="pattern" id="pattern" title="pattern">
                 <option value="img/PinkFrame.jpg">Pattern1</option>
                 <option value="img/wall_img.jpg">Pattern2</option>
             </select>
+    </label><br>
+    <label for="input">上傳其他圖層：
+            <input type="file" id="input" />
     </label>
+    <span style="font-size:10px">*建議大小：560x560</span><br>
     <div class="inputtext" style="width:600px; margin:0 auto;">
         <label for="inputed">輸入客製化文字：
             <textarea name="inputed" maxlength="6" id="inputed" placeholder="限輸6字"></textarea><!-- 提供使用者輸入文字欄-->
