@@ -227,7 +227,7 @@ function getAlbum(){
 
 $("#album").change(function(){
 	var e=this.options[this.selectedIndex].value;
-	var t=e+"/photos";
+	var t=e+"/photos?type=small";
 	FB.api(t,function(e){
 		for(var t=0;t<e.data.length;t++){
 			var n=e.data[t].id;
