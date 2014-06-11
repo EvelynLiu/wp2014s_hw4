@@ -264,7 +264,7 @@ $("#photo").change(function(){
 	})
 });
 
-function handleFiles(e){
+/*function handleFiles(e){
 	var t=document.getElementById("canvas").getContext("2d");
 	var n=URL.createObjectURL(e.target.files[0]);
 	var r=new Image;
@@ -278,5 +278,5 @@ function handleFiles(e){
 window.onload=function(){
 	var e=document.getElementById("input");
 	e.addEventListener("change",handleFiles,false)
-}
+}*/
 
