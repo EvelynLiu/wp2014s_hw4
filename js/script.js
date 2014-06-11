@@ -49,6 +49,7 @@ FB.getLoginStatus(function (response) {
         scope: 'publish_actions,user_photos,user_likes', 
     });
   } 
+  $("#pattern").prop("selectedIndex",-1);
 });
 
 
@@ -113,10 +114,9 @@ FB.getLoginStatus(function (response) {
 			$("#pattern").change(function(){
 				var e=this.options[this.selectedIndex].value;
 				image.src=e;
-				var canvas=document.getElementById("canvas");
 				ctx.drawImage(image,0,0);
 			});
-			//ctx.drawImage(img,0,0); //劃入img2
+			ctx.drawImage(img,0,0); //劃入img2
 			ctx.drawImage(profileIMG,canMouseX,canMouseY);//從XY軸0，0值開始畫如profileimg
 			ctx.drawImage(img3,70,350); //劃入img3，並根據你的滑鼠游標移動，你可以自行更換想要移動的圖層，數值會因XY軸向有所不同
 			var inputedText = $('#inputed').val();//抓取頁面inputed ID的內容
