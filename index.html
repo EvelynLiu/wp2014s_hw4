@@ -25,6 +25,7 @@
 
     <section id="main">
         <h2>This is a HTML5 Canvas Page with Facebook</h2>
+        <h3>Please select a photo from your album</h3>
         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
         <button id="takeAlbum" onClick="getAlbum()">Get album</button><br>
         
@@ -34,9 +35,8 @@
             </label>
         
         <h5>This is Your Facebook Profile Picture:</h5>
-        <img id="preview1" src=" " crossorigin="anonymous">
-        <p id="likeOfPic">Who likes your photo: </p>
-        <p id="commentOfPic">Here are their comments: </p>
+        <img id="preview1" display="hidden" src=" " crossorigin="anonymous">
+        <p id="likeOfPic">Count of likes of your photo: </p>
         <h5>Edit your Facebook Profile Picture here:</h5>
         <canvas width="540" height="540" id="canvas"></canvas>
     </section>

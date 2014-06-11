@@ -21,7 +21,7 @@ FB.getLoginStatus(function (response) {
   	//拿token
   	window.authToken = response.authResponse.accessToken;
     //呼叫api把圖片放到#preview IMG tag 內
-    FB.api("/me/picture?type=large",function (e){
+    /*FB.api("/me/picture?type=large",function (e){
     	$("#preview1").attr("src",e.data.url);
     });
     FB.api("/641547479267436",function (e){
@@ -37,7 +37,7 @@ FB.getLoginStatus(function (response) {
     		var i=e.comments.data[t].message;
     		$('#commentOfPic').append(i+" ");
     	}
-    });
+    });*/
   } 
   else {
     //要求使用者登入，索取publish_actions權限
@@ -225,9 +225,6 @@ function getAlbum(){
 }
 
 $("#album").change(function(){
-	//$("#photoContainer").html("");
-	$("#photo").html("");
-	console.log("test");
 	var e=this.options[this.selectedIndex].value;
 	var t=e+"/photos";
 	FB.api(t,function(e){
@@ -241,7 +238,6 @@ $("#album").change(function(){
 	})
 });
 $("#photo").change(function(){
-	//$("#photoContainer").html("");
 	var e=this.options[this.selectedIndex].value;
 	FB.api(e,function(e){
 		var t=e.images[0].source;
@@ -255,7 +251,12 @@ $("#photo").change(function(){
 		}
 		//var s="<strong>Get "+i+' like </strong><br><figure><img style="display:hidden; width:0; height:0;" crossorigin="anonymous" id="albumPhoto" src="'+t+'" alt="'+n+'" ><figcaption>'+n+"</figcaption></figure>";
 		$("#preview1").attr("src",t);
-		//$("#photoContainer").html(s)
+		$("#preview1").attr("style","height:300;");
+		$('#likeOfPic').append(i);
+		for(var c=0;c<e.comments.data.length;c++){
+    		var k=e.comments.data[c].message;
+    		$('#commentOfPic').append(k+" ");
+    	}
 	})
 });
 
