@@ -220,7 +220,7 @@ function getAlbum(){
 			var i='<option id="albumID" value='+n+">"+r+"</option>";
 			$("#album").append(i);
 			$("#album").prop("selectedIndex",-1)
-			var v=this.options[this.selectedIndex].value;
+			/*var v=this.options[this.selectedIndex].value;
 			var s=v+"/photos";
 			FB.api(s,function (e){
 				for(var t=0;t<e.data.length;t++){
@@ -230,7 +230,7 @@ function getAlbum(){
 					$("#photo").append(i);
 					$("#photo").prop("selectedIndex",-1)
 				}
-			})
+			})*/
 		}
 	});
 }
