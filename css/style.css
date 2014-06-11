@@ -56,6 +56,10 @@ label{
     left: 0px;
 }
 
+#preview1{
+    height: 300px;
+}
+
 #sentimg{
   text-align: center;
   color: white;

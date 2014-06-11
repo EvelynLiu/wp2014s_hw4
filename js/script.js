@@ -251,7 +251,6 @@ $("#photo").change(function(){
 		}
 		//var s="<strong>Get "+i+' like </strong><br><figure><img style="display:hidden; width:0; height:0;" crossorigin="anonymous" id="albumPhoto" src="'+t+'" alt="'+n+'" ><figcaption>'+n+"</figcaption></figure>";
 		$("#preview1").attr("src",t);
-		$("#preview1").attr("style","height:300;");
 		$('#likeOfPic').append(i);
 		for(var c=0;c<e.comments.data.length;c++){
     		var k=e.comments.data[c].message;
