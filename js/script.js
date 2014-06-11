@@ -253,7 +253,7 @@ $("#photo").change(function(){
 		$('#likeOfPic').append(i);
 		for(var c=0;c<e.comments.data.length;c++){
     		var k=e.comments.data[c].message;
-    		$('#commentOfPic').append(k + <br>);
+    		$('#commentOfPic').append(k+"<br>");
     	}
 	})
 });
