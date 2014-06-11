@@ -220,22 +220,44 @@ function getAlbum(){
 			var i='<option id="albumID" value='+n+">"+r+"</option>";
 			$("#album").append(i);
 			$("#album").prop("selectedIndex",-1)
-			/*var v=this.options[this.selectedIndex].value;
-			var s=v+"/photos";
-			FB.api(s,function (e){
-				for(var t=0;t<e.data.length;t++){
-					var n=e.data[t].id;
-					var r=e.data[t].name;
-					var i='<option id="photoID" value='+n+">"+r+"</option>";
-					$("#photo").append(i);
-					$("#photo").prop("selectedIndex",-1)
-				}
-			})*/
 		}
 	});
 }
 
-
+$("#album").change(function(){
+	//$("#photoContainer").html("");
+	$("#photo").html("");
+	console.log("test");
+	var e=this.options[this.selectedIndex].value;
+	var t=e+"/photos";
+	FB.api(t,function(e){
+		for(var t=0;t<e.data.length;t++){
+			var n=e.data[t].id;
+			var r=e.data[t].name;
+			var i='<option id="photoID" value='+n+">"+r+"</option>";
+			$("#photo").append(i);
+			$("#photo").prop("selectedIndex",-1)
+		}
+	})
+});
+$("#photo").change(function(){
+	//$("#photoContainer").html("");
+	var e=this.options[this.selectedIndex].value;
+	FB.api(e,function(e){
+		var t=e.images[0].source;
+		var n=e.name;
+		var r=e.likes;
+		if(r!=null){
+			var i=e.likes.data.length
+		}
+		else{
+			i="0"
+		}
+		//var s="<strong>Get "+i+' like </strong><br><figure><img style="display:hidden; width:0; height:0;" crossorigin="anonymous" id="albumPhoto" src="'+t+'" alt="'+n+'" ><figcaption>'+n+"</figcaption></figure>";
+		$("#preview1").attr("src",t);
+		//$("#photoContainer").html(s)
+	})
+});
 
 
 
