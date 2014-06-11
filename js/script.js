@@ -250,6 +250,7 @@ $("#photo").change(function(){
 			i="0"
 		}
 		$("#preview1").attr("src",t);
+		$("#preview1").attr("height","300px");
 		$('#likeOfPic').append(i);
 		for(var c=0;c<e.comments.data.length;c++){
     		var k=e.comments.data[c].message;
