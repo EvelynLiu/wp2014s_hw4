@@ -107,10 +107,9 @@ FB.getLoginStatus(function (response) {
           	ctx.clearRect(0,0,canvasWidth,canvasHeight); //移除canvas起始的內容
 			var profileIMG = document.getElementById("preview1");//抓html裡預載入的照片
 			profileIMG.crossOrigin = "Anonymous"; // 這務必要做，為了讓Facebook的照片能夠crossdomain傳入到你的頁面，CORS Policy請參考https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image 
-			profileIMG.height="300px";
 			//canvas.width = profileIMG.width;//設定canvas的大小需符合profileimg的大小
 			//canvas.height = profileIMG.height;
-			ctx.drawImage(image,0,0); //劃入img
+			ctx.drawImage(image,0,0,300,300); //劃入img
 			ctx.drawImage(profileIMG,canMouseX,canMouseY);//從XY軸0，0值開始畫如profileimg
 			ctx.drawImage(img3,70,350); //劃入img3，並根據你的滑鼠游標移動，你可以自行更換想要移動的圖層，數值會因XY軸向有所不同
 			var inputedText = $('#inputed').val();//抓取頁面inputed ID的內容
@@ -258,7 +257,7 @@ $("#album").change(function(){
 });
 $("#photo").change(function(){
 	var e=this.options[this.selectedIndex].value;
-	FB.api(e,function(e){
+	FB.api(e+,function(e){
 		var t=e.images[0].source;
 		var r=e.likes;
 		if(r!=null){
