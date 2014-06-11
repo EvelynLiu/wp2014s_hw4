@@ -109,7 +109,7 @@ FB.getLoginStatus(function (response) {
 			profileIMG.height=300;
 			//canvas.width = profileIMG.width;//設定canvas的大小需符合profileimg的大小
 			//canvas.height = profileIMG.height;
-			ctx.drawImage(img2,0,0); //劃入img2
+			//ctx.drawImage(img2,0,0); //劃入img2
 			ctx.drawImage(profileIMG,canMouseX,canMouseY);//從XY軸0，0值開始畫如profileimg
 			ctx.drawImage(img3,70,350); //劃入img3，並根據你的滑鼠游標移動，你可以自行更換想要移動的圖層，數值會因XY軸向有所不同
 			var inputedText = $('#inputed').val();//抓取頁面inputed ID的內容
@@ -127,8 +127,6 @@ FB.getLoginStatus(function (response) {
 
 
 //可以思考這程式要放在init內還是init外?
-
-
 
 
 }; //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<init end
@@ -212,6 +210,15 @@ function dataURItoBlob(dataURI) {
     });
 }
 
+var img=new Image;
+$("#pattern").change(function(){
+	var e=this.options[this.selectedIndex].value;
+	img.src=e;
+	var canvas=document.getElementById("canvas");
+	ctx.drawImage(img,0,0);
+});
+
+
 function getAlbum(){
 	$("#takeAlbum").remove();
 	FB.api("/me/albums",function (e){
@@ -227,7 +234,7 @@ function getAlbum(){
 
 $("#album").change(function(){
 	var e=this.options[this.selectedIndex].value;
-	var t=e+"/photos?type=small";
+	var t=e+"/photos";
 	FB.api(t,function(e){
 		for(var t=0;t<e.data.length;t++){
 			var n=e.data[t].id;
