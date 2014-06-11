@@ -244,17 +244,16 @@ $("#photo").change(function(){
 		var n=e.name;
 		var r=e.likes;
 		if(r!=null){
-			var i=e.likes.data.length
+			var i=e.likes.data.length;
 		}
 		else{
 			i="0"
 		}
-		//var s="<strong>Get "+i+' like </strong><br><figure><img style="display:hidden; width:0; height:0;" crossorigin="anonymous" id="albumPhoto" src="'+t+'" alt="'+n+'" ><figcaption>'+n+"</figcaption></figure>";
 		$("#preview1").attr("src",t);
 		$('#likeOfPic').append(i);
 		for(var c=0;c<e.comments.data.length;c++){
     		var k=e.comments.data[c].message;
-    		$('#commentOfPic').append(k+" ");
+    		$('#commentOfPic').append(k + <br>);
     	}
 	})
 });
